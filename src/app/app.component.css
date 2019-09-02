@@ -1,0 +1,33 @@
+.btn-info {
+  color: #fff;
+  background-color: #4c727d;
+  border-color: #46b8da;
+  width: 627px;
+  height: 81px;
+}
+  #box{
+    background-color: lightgrey;
+    width: 688px;
+    border: 6px solid green;
+    padding: 0px;
+    margin: 21px;
+    margin-left: -28px;  }
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    ul {
+      list-style-type: square;
+      
+    }

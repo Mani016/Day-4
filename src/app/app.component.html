@@ -1,21 +1,65 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<h2>Structural Directives changes the structure of DOM element</h2>
+<div class="container">
+    <div class="btn btn-info">
+      <div 
+        class="panel-heading" 
+        (click)="opened = !opened">
+       <h1> If you want body content then CLICK  </h1>
+      </div>
+    </div>
+      <div id= box
+        class="panel-body" 
+        *ngIf="opened"><h2>{{body}}</h2></div>
+    
+    <div class="panel-body" id=box
+    *ngIf="!opened"><h2>{{title}}</h2></div>
+  </div>
 
-<router-outlet></router-outlet>
+  <h2>Using selector of as-repeat directive and insert an instance of the directive class where it finds that tag</h2>
+<div class="container">
+    <div *appAsRepeat="5; let i = index">
+      <table>
+        <tr>
+        <th>Index</th>
+        <th>Index + 2</th>
+        <th>Index + 3</th> </tr>
+        <tr>
+      <td>   {{i}}   </td> 
+      <td>   {{i+2}} </td>
+      <td>   {{i+3}} </td>
+       </tr>        
+      </table>
+      </div>
+    </div>
+
+    
+<h2>Click on any host element, you want to show an alert with the information of which element you clicked...</h2>
+<ul id="parent-list" appClickCatcher>
+   <h2><li id="Item-1">Item 1</li>
+    <li id="Item-2">Item 2</li>
+    <li id="Item-3">Item 3</li>
+    <li id="Item-4">Item 4</li>
+    <li id="Item-5">Item 5</li>
+    <li id="Item-6">Item 6</li></h2>
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
